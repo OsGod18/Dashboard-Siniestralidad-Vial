@@ -1,0 +1,150 @@
+html{
+    height: 100%;
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #0E2A3B;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    background-color: transparent;
+}
+
+/*MODIFICANDO HEADER COMPLETO*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 5px #F7F7F7;
+    background-color: #0E2A3B;
+    box-shadow: 2px 2px 30px 5px rgb(171, 171, 171);
+    
+}
+
+#icono-finstruvial {
+    height: 80px;
+    width: 300px;
+    
+}
+
+#titulo-header {
+    font-family: "Anta", sans-serif;
+    font-size: 40px;
+    color: #F7F7F7;
+
+    animation: sombraColores 3s infinite alternate ease-in-out;
+
+    
+}
+
+@keyframes sombraColores {
+
+    25% {
+        text-shadow: 2px 2px 3px #4CAF50;
+    }
+    50% {
+        text-shadow: 2px 2px 3px  #000000;
+    }
+    75% {
+        text-shadow: 2px 2px 3px #D32F2F;
+    }
+    100% {
+        text-shadow: 1px 1px 3px #F2C300;
+    }
+
+}
+.flexbox-header-titulo-secciones{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 20px;
+}
+
+.seccion {
+    font-family: "Anta", sans-serif;
+    font-size: 20px;
+    margin-right: 40px;
+    text-decoration: none;
+    color: #F7F7F7;
+    animation: sombraColores 3s infinite alternate ease-in-out;
+
+}
+
+/*------------------------*/
+
+/*MODIFICANDO MAIN COMPLETO*/
+
+main {
+    justify-content: center;
+}
+
+#contenedor-introduccion {
+    text-align: center;
+    padding: 70px;
+    border:  solid 5px #23465d;
+    border-radius: 20px;
+    background-color: #16374C;
+    margin: 100px;
+    box-shadow: 5px 5px 20px 20px  #23465d;
+
+}
+
+h1 {
+    font-family: 'Anta', sans-serif;
+    font-size: 50px;
+    margin: 0;
+    color: #F7F7F7;
+    
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #F2C300;
+    margin: 8px auto 0;
+}
+
+p {
+    font-family: 'Anta', sans-serif;
+    font-size: 25px;
+    flex-direction: column;
+    color: #F7F7F7;
+}
+
+/*------------------------*/
+
+
+
+/*MODIFICANDO FOOTER COMPLETO*/
+
+footer{
+    border-top: 5px solid rgba(255, 255, 255, 0.08);
+    background-color: #0B1F2A;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#footer-copy {
+    color: #78909C;
+    font-size: 0.85rem;
+}
+
+.footer-texto {
+    color: #B0BEC5;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+/*------------------------*/

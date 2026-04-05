@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+
+    <!--ENVIARLE EL ARCHIVO A CHAT GPT PARA QUE LO CORRIJA-->
+
+
+
+    <!--INFOGRAFIA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <!---->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dsh-Graficas</title>
+    <link rel="stylesheet" href="dashboard_graficas.css">
+    <link rel = "icon" type = "image/png" href = "../Imagenes dashboard/icono.png">
+</head>
+<body>
+    <!--Header superior con titulo y otras secciones-->
+    <header>
+        <nav class = "flexbox-header-titulo-secciones">
+            <!--Icono FINSTRUVIAL y titulo-->
+            <img src="../Imagenes dashboard/logo.png" alt="Icono de finstruvial" id = "icono-finstruvial">
+            <h1 id = "titulo-header" style="white-space: pre-line;">DASHBOARD DE
+                SINIESTRALIDAD</h1>
+            <!--Otras secciones-->
+        </nav>
+        <nav class = "flexbox-header-titulo-secciones">
+            <a href="../Codigo Principal/dashboard_intro.html" class = "seccion">Introduccion</a>
+            <a href="../Codigo Tabla/dashboard_tabla.html" class = "seccion">Tabla</a> <!--seccion - tabla-->
+            <a href="" class = "seccion">Grafica</a> <!--seccion - grafica(dashboard general)-->
+        </nav>
+    </header>
+    <!---------------------------->
+    <!--Contenido principal-->
+    <main>
+        <h1>Graficas</h1>
+        <section id ="contenedor-introduccion">
+            
+            <!--KPIs-->
+
+            <div class="kpi-container">
+            
+                <div class="kpi-card fade-up">
+                    <h2 id="kpiTotal">0</h2>
+                    <p>Total de casos</p>
+                </div>
+
+                <div class="kpi-card fade-up">
+                    <h2 id="kpiSexo">0%</h2>
+                    <p>Predominancia por sexo</p>
+                </div>
+
+                <div class="kpi-card fade-up">
+                    <h2 id="kpiAnio">—</h2>
+                    <p id="kpiAnioTop">----</p>
+                </div>
+
+                <div class="kpi-card fade-up">
+                    <h2 id="kpiEdad">—</h2>
+                    <p>Grupo de edad más afectado</p>
+                </div>
+            
+            
+            </div>
+
+
+            <!--GRAFICAS-->
+            
+            <div class="grid-graficas">
+                <div class="card-grafica fade-up">
+                    <canvas id="graficaSexo"></canvas>
+                </div>
+
+                <div class="card-grafica fade-up">
+                    <canvas id="graficaEdad"></canvas>
+                </div>
+                
+
+                <div class="card-grafica fade-up">
+                    <canvas id="graficaAnio"></canvas>
+                </div>
+
+                <div class="card-grafica fade-up">
+                    <canvas id="graficaCicloVital"></canvas>
+                </div>
+
+                <div class="card-grafica fade-up">
+                    <canvas id="graficaEscolaridad"></canvas>
+                </div>
+
+                <div class="card-grafica fade-up">
+                    <canvas id="graficaEstadoCivil"></canvas>
+                </div>
+
+                <div class="card-grafica fade-up">
+                    <canvas id="graficaSexoEdad"></canvas>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+    <!---------------------------->
+    <!--Footer inferior con informacon y creador de la pagina web-->
+    <footer>
+        <p id = "footer-copy">© 2025 Finstruvial — Todos los derechos le pertenecen a este instituo privado</p>
+        <p class = "footer-texto">Datos abiertos · Elaboración propia</p>
+        <p class="footer-texto">Creado por: OsGod</p>
+
+    </footer>
+    <!---------------------------->
+
+
+<!--SCRIPT PARA CHART JS-->
+
+</script>
+
+<!--Archivo de JS para conectar datos de la tabla-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="data.js"></script>
+<script src="dashboard_graficas.js"></script>
+
+</body>
+</html>

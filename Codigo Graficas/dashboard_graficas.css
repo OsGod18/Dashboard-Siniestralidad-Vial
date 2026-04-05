@@ -1,0 +1,370 @@
+
+
+
+html{
+    height: 100%;
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #0E2A3B;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    background-color: transparent;
+}
+
+/*MODIFICANDO HEADER COMPLETO*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 5px #F7F7F7;
+    background-color: #0E2A3B;
+    box-shadow: 2px 2px 30px 5px rgb(171, 171, 171);
+    
+}
+
+#icono-finstruvial {
+    height: 80px;
+    width: 300px;
+    
+}
+
+#titulo-header {
+    font-family: "Anta", sans-serif;
+    font-size: 40px;
+    color: #F7F7F7;
+
+    animation: sombraColores 3s infinite alternate ease-in-out;
+
+    
+}
+
+@keyframes sombraColores {
+
+    25% {
+        text-shadow: 2px 2px 3px #4CAF50;
+    }
+    50% {
+        text-shadow: 2px 2px 3px  #000000;
+    }
+    75% {
+        text-shadow: 2px 2px 3px #D32F2F;
+    }
+    100% {
+        text-shadow: 1px 1px 3px #F2C300;
+    }
+
+}
+.flexbox-header-titulo-secciones{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 20px;
+}
+
+.seccion {
+    font-family: "Anta", sans-serif;
+    font-size: 20px;
+    margin-right: 40px;
+    text-decoration: none;
+    color: #F7F7F7;
+    animation: sombraColores 3s infinite alternate ease-in-out;
+
+}
+
+/*------------------------*/
+
+/*MODIFICANDO MAIN COMPLETO*/
+
+main {
+    justify-content: center;
+}
+
+#contenedor-introduccion {
+    text-align: center;
+    padding: 70px;
+    border:  solid 5px #23465d;
+    border-radius: 20px;
+    background-color: #16374C;
+    margin: 100px;
+    box-shadow: 5px 5px 20px 20px  #23465d;
+
+}
+
+h1 {
+    font-family: 'Anta', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    color: #F7F7F7;
+    margin-bottom: 50px;
+    
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #F2C300;
+    margin: 8px auto 0;
+}
+
+p {
+    font-family: 'Anta', sans-serif;
+    font-size: 25px;
+    flex-direction: column;
+    color: #F7F7F7;
+}
+
+/*------------------------*/
+
+
+
+/*MODIFICANDO FOOTER COMPLETO*/
+
+footer{
+    border-top: 5px solid rgba(255, 255, 255, 0.08);
+    background-color: #0B1F2A;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#footer-copy {
+    color: #78909C;
+    font-size: 0.85rem;
+}
+
+.footer-texto {
+    color: #B0BEC5;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+/*------------------------*/
+
+/*MODIFICANDO DASHBOARD*/
+
+
+/*KPIs*/
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.kpi-card {
+    background-color: #0E2A3B;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 4px 4px 15px #00000060;
+    height: 180px;
+    width: 180px;
+    transition: all 1.5s ease;
+    
+
+}
+
+.kpi-card h2 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: #4FC3F7;
+    margin-bottom: 8px;
+    transition: font-size 1.5s ease;
+}
+
+.kpi-card p {
+    color: #E0E0E0;
+    font-size: 15px;
+    opacity: 0.85;
+    transition: font-size 1.5s ease;
+}
+
+.kpi-card:hover {
+    background-color: #10415f;
+    height: 200px;
+    width: 200px;
+}
+
+.kpi-card:hover p { 
+    font-size: 26px;
+    padding: 0;
+}
+
+.kpi-card:hover h2 {
+    font-size: 32px;
+}
+
+
+
+
+
+
+
+/*GRAFICAS*/
+#contenedor-graficas {
+    padding: 60px;
+    text-align: center;
+}
+
+.grid-graficas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 80px;
+    
+}
+
+.card-grafica {
+    background-color: #16374C;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 5px 5px 20px #00000070;
+    min-height: 280px;
+    max-height: 420px;
+    /* CLAVE */
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.card-grafica:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 20px #ececec70;
+}
+
+
+.card-grafica canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.card-grafica::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+    ANIMACION DE ENTRADA
+========================= */
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 4.5s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/*------------------------*/
+
+/*RESPONSIVE DESING*/
+
+/*HEADER*/
+
+@media (max-width: 768px) {
+
+    header nav {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    #icono-finstruvial {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    #titulo-header {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+    .seccion {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/*FOOTER*/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+
+/**/
+
+@media (max-width: 480px) {
+
+    main h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .grid-graficas {
+        gap: 30px;
+    }
+
+    .card-grafica {
+        padding: 20px;
+    }
+    
+
+}
+
+
+
+/*kpi*/
+
+@media (max-width: 600px) {
+    .card-grafica {
+        min-height: 260px;
+        padding: 20px;
+        margin: auto;
+    }
+
+    .kpi-card h2 {
+        font-size: 1.6rem;
+    }
+
+
+}
+
